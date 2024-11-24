@@ -1,7 +1,7 @@
 // Displays the homepage the home page
 
 import logo1 from '../images/logo1.png';
-
+import { attachEventListeners } from '..';
 
 function loadHomePage() {
   const content = document.getElementById('content');
@@ -22,6 +22,7 @@ function loadHomePage() {
     homeHeroCover.appendChild(label);
 
     const heroButton = document.createElement("button");
+    heroButton.classList.add("menu-btn");
     heroButton.innerText = "Check out our Menu";
 
     homeHeroCover.appendChild(heroButton);
@@ -74,6 +75,7 @@ function loadHomePage() {
     const eatContainer = document.createElement("div");
     eatContainer.classList.add("home-about-image-container");
     eatContainer.classList.add("eat");
+    eatContainer.classList.add("menu-btn");
     const eatLabel = document.createElement("p");
     eatLabel.innerText = "Eat";
     eatContainer.appendChild(eatLabel);
@@ -82,6 +84,7 @@ function loadHomePage() {
     const drinkContainer = document.createElement("div");
     drinkContainer.classList.add("home-about-image-container");
     drinkContainer.classList.add("drink");
+    drinkContainer.classList.add("menu-btn");
     const drinkLabel = document.createElement("p");
     drinkLabel.innerText = "Drink";
     drinkContainer.appendChild(drinkLabel);
@@ -100,6 +103,7 @@ function loadHomePage() {
   }
   createHomeAboutOptions();
 
+  attachEventListeners();
 }
 
 export default loadHomePage;
