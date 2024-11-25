@@ -2,8 +2,9 @@
 import './styles/styles.css';
 import loadHomePage from './scripts/homePage';
 import loadMenuPage from './scripts/menuPage';
+import loadAboutPage from './scripts/aboutPage';
 
-loadHomePage();
+
 
 export function attachEventListeners() {
   // Attach event listeners for home buttons
@@ -15,6 +16,12 @@ export function attachEventListeners() {
   document.querySelectorAll(".menu-btn").forEach(button => {
     button.addEventListener("click", loadMenuPage);
   });
+
+  // Attach event listeners for about buttons
+  document.querySelectorAll(".about-btn").forEach(button => {
+    button.addEventListener("click", loadAboutPage);
+  })
 }
 
+loadHomePage();
 attachEventListeners();
